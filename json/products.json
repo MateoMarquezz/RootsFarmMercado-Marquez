@@ -1,0 +1,85 @@
+[{
+        "id": 0,
+        "name": "Bolson 1",
+        "description": "Frutilla 1kg, Anana 1kg, ,Naranja 1kg ,Papa 1kg, Manzana roja 1kg, Mango 1kg, Zanahora 1kg, Zapallo 1kg.",
+        "price": 580,
+        "imageUrl": "img/bolsonconverduras.jpg"
+    },
+    {
+        "id": 1,
+        "name": "Bolson 2",
+        "description": "Melon 1kg, Lechuga 1kg, ,Naranja 1kg ,Papa 1kg, Manzana roja 1kg, Mango 1kg, Zanahora 1kg, Zapallo 1kg.",
+        "price": 610,
+        "imageUrl": "img/bolsonconverduras.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Bolson 3",
+        "description": "Frutilla 1kg, Anana 1kg, ,Naranja 1kg ,Papa 1kg, Manzana roja 1kg, Mango 1kg, Zanahora 1kg, Zapallo 1kg.",
+        "price": 680,
+        "imageUrl": "img/bolsonconverduras.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Bolson 4",
+        "description": "Frutilla 1kg, Anana 1kg, ,Naranja 1kg ,Papa 1kg, Manzana roja 1kg, Mango 1kg, Zanahora 1kg, Zapallo 1kg.",
+        "price": 600,
+        "imageUrl": "img/bolsonconverduras.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Bolson 5",
+        "description": "Frutilla 1kg, Anana 1kg, ,Naranja 1kg ,Papa 1kg, Manzana roja 1kg, Mango 1kg, Zanahora 1kg, Zapallo 1kg.",
+        "price": 685,
+        "imageUrl": "img/bolsonconverduras.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Bolson 6",
+        "description": "Frutilla 1kg, Anana 1kg, ,Naranja 1kg ,Papa 1kg, Manzana roja 1kg, Mango 1kg, Zanahora 1kg, Zapallo 1kg.",
+        "price": 630,
+        "imageUrl": "img/bolsonconverduras.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Bolson 7",
+        "description": "Frutilla 1kg, Anana 1kg, ,Naranja 1kg ,Papa 1kg, Manzana roja 1kg, Mango 1kg, Zanahora 1kg, Zapallo 1kg.",
+        "price": 680,
+        "imageUrl": "img/bolsonconverduras.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Bolson 8",
+        "description": "Frutilla 1kg, Anana 1kg, ,Naranja 1kg ,Papa 1kg, Manzana roja 1kg, Mango 1kg, Zanahora 1kg, Zapallo 1kg.",
+        "price": 670,
+        "imageUrl": "img/bolsonconverduras.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Bolson 9",
+        "description": "Frutilla 1kg, Anana 1kg, ,Naranja 1kg ,Papa 1kg, Manzana roja 1kg, Mango 1kg, Zanahora 1kg, Zapallo 1kg.",
+        "price": 690,
+        "imageUrl": "img/bolsonconverduras.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Bolson 10",
+        "description": "Frutilla 1kg, Anana 1kg, ,Naranja 1kg ,Papa 1kg, Manzana roja 1kg, Mango 1kg, Zanahora 1kg, Zapallo 1kg.",
+        "price": 690,
+        "imageUrl": "img/bolsonconverduras.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Bolson 11",
+        "description": "Frutilla 1kg, Anana 1kg, ,Naranja 1kg ,Papa 1kg, Manzana roja 1kg, Mango 1kg, Zanahora 1kg, Zapallo 1kg.",
+        "price": 650,
+        "imageUrl": "img/bolsonconverduras.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Bolson 12",
+        "description": "Frutilla 1kg, Anana 1kg, ,Naranja 1kg ,Papa 1kg, Manzana roja 1kg, Mango 1kg, Zanahora 1kg, Zapallo 1kg.",
+        "price": 650,
+        "imageUrl": "img/bolsonconverduras.jpg"
+    }
+]

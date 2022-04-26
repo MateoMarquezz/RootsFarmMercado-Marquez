@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="/img/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="js/index.js" async></script>
+    <script type="module" src="js/product.js" async></script>
+    <script type="module" src="js/dom.js" async></script>
+    <script type="module" src="js/cart.js" async></script>
+    <script type="module" src="js/order.js" async></script>
+    <script type="module" src="js/animations.js" async></script>
+    <script type="module" src="js/vendor.js" async></script>
+    <script type="module" src="js/shipping.js" async></script>
+    <script type="module" src="js/payment.js" async></script>
+    <script type="module" src="js/customer.js" async></script>
+    <script type="module" src="js/globalfunctions.js" async></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" async></script>
+</head>
+
+<body>
+    <header class="header">
+        <title>RootsFarm</title>
+        <div class="container">
+            <div class="row">
+                <div class="one columns u-pull-right header-cart-div">
+                    <ul>
+                        <li class="menu-carrito">
+                            <div class="u-pull-right header-cartimg-div">
+                                <img src="img/cart.png" alt="">
+                                <span class="countItemsCart" id="123">0</span>
+                            </div>
+                            <div id="carrito" style="display: none">
+                                <p class="carrito-vacio">Agrega tus compras!</p>
+                                <table class="u-full-width">
+                                    <thead>
+                                        <tr>
+                                            <th>Bolson</th>
+                                            <th></th>
+                                            <th>Cant</th>
+                                            <th>Total</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="cartTable">
+                                        <!-- Productos carrito -->
+                                    </tbody>
+                                </table>
+                                <p class="totalCartLabel">Total &nbsp;$<span id="totalAmountCart">0</span></p>
+                                <a href="#" id='confimCart' class="u-full-width confirmar-pedido button">Confirmar Pedido</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="six colmuns">
+            </div>
+        </div>
+    </div>
+    <div class="barra">
+        <div class="container">
+            <div class="row">
+                <a class="u-full-width button input armar-bolson">Armá tu Bolson!</a>
+            </div>
+        </div>
+    </div>
+    <div class="checkout-modal" style="display: none;">
+        <div class="contenedor-checkout-modal">
+            <div class="row contenedor-checkout-modal-sub">
+                <div class="u-full-width checkout-title">
+                    <h7>Checkout</h7>
+                </div>
+                <!-- Datos del cliente -->
+                <form class="customer-data-checkout" id="id-form-checkout" autocomplete="on">
+                    <div class="checkout-title-div">Tus Datos</div>
+                    <div id="checkout-customerinfo-div" class="row">
+                        <div>
+                            <label for="checkout-customer-name">Nombre</label>
+                            <input class="u-full-width" type="text" required placeholder="Nombre" id="checkout-customer-name" name="name" autocomplete="name">
+                        </div>
+                        <div>
+                            <label for="checkout-customer-tel">Teléfono Movil</label>
+                            <input class="u-full-width" type="tel" required pattern="[0-9]{10}" placeholder="(0___) 15________" id="checkout-customer-tel" autocomplete="tel">
+                        </div>
+                        <div>
+                            <label for="checkout-customer-address">Dirección de envío</label>
+                            <input class="u-full-width" type="text" required placeholder="" id="checkout-customer-address" name="address" autocomplete="address">
+                        </div>
+                        <div>
+                            <label for="checkout-customer-email">E-mail</label>
+                            <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="checkout-customer-email" name="email" autocomplete="email">
+                        </div>
+                    </div>
+                    <label for="checkout-customer-notes">Notas</label>
+                    <textarea class="u-full-width" placeholder="Notas" id="checkout-customer-notes"></textarea>
+                    <!-- Datos envio -->
+                    <div class="checkout-title-div">Envío</div>
+                    <div id="checkout-shippinginfo-div" class="row">
+                        <table class="u-full-width checkout-shipping-table">
+                            <tbody>
+                                <tr>
+                                    <td><input class="radio-shipping" type="radio" name="shipping-radio-checkout" data-shipping='true' id="shipping-req-radio"></td>
+                                    <td><label id="checkout-ship-req-label" for="shipping-req-radio">Envío a
+                                            domicilio</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="radio-shipping" type="radio" name="shipping-radio-checkout" data-shipping='false' id="no-shipping-radio"></td>
+                                    <td><label for="no-shipping-radio">Retiro personalmente</label></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <label for="checkout-shipping-notes">Notas (opcional)</label>
+                    <textarea class="u-full-width" id="checkout-shipping-notes"></textarea>
+                    <!-- Datos pago -->
+                    <div class="checkout-title-div">Pago</div>
+                    <div class="row checkout-payment-div" id="checkout-payment-div">
+                        <div class="u-full-width payment-type-div">
+                            <input type="radio" name="payment-radio-checkout" data-paytype="cash" id="cashpay-req-radio">
+                            <label for="cashpay-req-radio">Efectivo</label>
+                        </div>
+                        <div class="u-full-width payment-type-div">
+                            <input type="text" name="amount-cash" id="checkout-cashamount-text" placeholder="Cantidad de efectivo...">
+                        </div>
+                        <div class="u-full-width line-div"></div>
+                        <div class="u-full-width payment-type-div">
+                            <input type="radio" name="payment-radio-checkout" data-paytype="online" id="onlinepay-shipping-radio">
+                            <label for="onlinepay-shipping-radio">Mercado Pago</label>
+                        </div>
+                    </div>
+                    <div class="checkout-title-div">Detalle de tu pago</div>
+                    <table class="u-full-width">
+                        <tbody id="checkout-table-amount">
+                        </tbody>
+                    </table>
+                    <input id="checkout-cancel-button" class="u-full-width button" type="button" value="Cancelar">
+                </form>
+                <div class="checkout-finalamount-div">Total $ <span id="checkout-amount-label">999</span></div>
+                <input id="checkout-confirm-button" class="u-full-width button-primary checkout-confirm-button" type="submit" form="id-form-checkout" value="Confirmar Pedido">
+            </div>
+        </div>
+    </div>
+    <!-- Menu bolson personalizado -->
+    <div class="stock-modal" style="display: none;">
+        <div class="ten columns lista-stock">
+            <div class="row">
+                <div class="stock u-full-width">
+                    <table class="u-full-width components-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Productos</th>
+                                <h6 class="product">Por cuestiones de stock se permite solo 1KG por producto</h6>
+                                <th>Precio</th>
+                                <th>Agregar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="componentsTable">
+                            <!-- Aca las verduras -->
+                        </tbody>
+                        <tbody class="bottomComponentsTable">
+                            <tr class="trTotal">
+                                <td></td>
+                                <td>TOTAL</td>
+                                <td>$<span id="subTotalComponentsSelected">0</span></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <textarea placeholder="Notas para RootsFarm" class="u-full-width" name="" id="customProductNotes" cols="30" rows="10"></textarea>
+                    <a href="#" id="confirmCustomProduct" class="button button-primary u-full-width confirmar-stock">Armar Bolson</a>
+                    <a href="#" class="button u-full-width borrar-seleccion">Cancelar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="prodcutsList" class="lista-productos" class="container">
+        <h1 class="encabezado">Variedades</h1>
+    </div>
+</body>
+<footer>
+    <section class="footer py-2">
+        <div class="container">
+            <div class="col-lg-9 pt-3">
+                <p>Copyright 2022 © RootsFarm | RootsFarm hecha por Marquez Mateo</p>
+            </div>
+</footer>
+
+
+</html>

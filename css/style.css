@@ -1,0 +1,502 @@
+    body {
+        background-color: #000000f8;
+        padding-right: 0;
+        background: linear-gradient(167deg, rgba(255, 255, 255, 1) 0%, rgba(248, 26, 92, 1) 32%, rgba(68, 67, 67, 1) 100%);
+        background-size: cover;
+        background-size: 100%;
+    }
+    
+    h1 {
+        text-align: center;
+        color: white;
+    }
+    
+    header {
+        padding: 5px;
+        background: rgb(255, 255, 255);
+        display: inline-flexbox;
+        text-align: center;
+    }
+    
+    .header-cartimg-div {
+        position: relative;
+        margin-right: 40px;
+    }
+    
+    @media (min-width: 650) {
+        header {
+            text-align: left;
+        }
+    }
+    
+    .borrar-item-cart {
+        background: rgb(151, 0, 0);
+        border-radius: 50%;
+        padding: 5px 10px;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+    }
+    
+    .bold {
+        font-weight: bold;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    .encabezado {
+        margin: 12px 0;
+        color: #ffffff;
+        font-size: x-large;
+        background-color: #363636c9;
+    }
+    
+    .product {
+        border: solid #000000 0.1rem;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: black;
+        border-radius: 4rem;
+        margin-top: 1rem;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+    
+    .product:hover {
+        background-color: red;
+    }
+    
+    body .menu-carrito {
+        position: relative;
+        margin-right: -30px;
+    }
+    
+    .menu-carrito #carrito {
+        display: none;
+    }
+    
+    .menu-carrito .countItemsCart {
+        position: absolute;
+        background: rgba(248, 26, 92, 1);
+        border-radius: 50%;
+        padding: 1px 8px;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        margin-left: -10px;
+        margin-top: 10px;
+    }
+    
+    .menu-carrito #carrito {
+        display: block;
+        color: white;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        z-index: 1;
+        background: #000000;
+        padding: 20px;
+    }
+    
+    .confirmar-pedido {
+        color: rgba(248, 26, 92, 1);
+    }
+    
+    .confirmar-pedido:hover {
+        color: rgba(248, 26, 92, 1);
+        font-size: 90%;
+        background: #424242;
+        transition: 0.5s;
+    }
+    
+    .carrito-vacio {
+        padding: 10px;
+        text-align: center;
+        background: rgba(248, 26, 92, 1);
+        border-radius: 10px;
+        color: black;
+        font-weight: bold;
+        margin: auto;
+    }
+    
+    .totalCartLabel {
+        text-align: right;
+        font-weight: bold;
+        padding-right: 60px;
+    }
+    
+    #cartTable td {
+        text-align: center;
+        padding: 8px;
+        margin: auto;
+        font-size: small;
+    }
+    
+    #carrito th {
+        text-align: center;
+        margin: auto;
+    }
+    
+    .barra {
+        background: rgba(248, 26, 92, 1);
+        height: 60px;
+        text-align: center;
+        color: white;
+        font-weight: normal;
+    }
+    
+    .barra .armar-bolson {
+        margin-top: 10px;
+        background-color: transparent;
+        font-size: larger;
+        color: white;
+        border: 0;
+        border-radius: 0;
+        animation-name: zoom-text;
+        animation-duration: 1.8s;
+        animation-iteration-count: infinite;
+    }
+    
+    .barra .armar-bolson:hover {
+        font-size: x-large;
+        animation-iteration-count: initial;
+        text-shadow: 1px 1px 25px rgb(255, 255, 255);
+    }
+    
+    @keyframes zoom-text {
+        0% {
+            font-size: larger;
+            ;
+        }
+        50% {
+            font-size: x-large;
+        }
+        100% {
+            font-size: larger;
+        }
+    }
+    
+    body .checkout-modal {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.849);
+    }
+    
+    .checkout-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: all 500ms ease;
+        z-index: 100;
+    }
+    
+    .checkout-modal .checkout-title {
+        display: inline-flex;
+        background-color: rgba(248, 26, 92, 1);
+        height: 30px;
+    }
+    
+    .checkout-title {
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+    }
+    
+    .contenedor-checkout-modal {
+        width: 350px;
+        height: 530px;
+        margin: auto;
+        background-color: cornsilk;
+        box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.6);
+        transition: all 500ms ease;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .contenedor-checkout-modal-sub {
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .contenedor-checkout-modal-sub .checkout-title-div {
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        background-color: rgba(248, 26, 92, 1);
+        opacity: 0.55;
+        margin-bottom: 5px;
+    }
+    
+    .checkout-payment-div {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .checkout-payment-div div {
+        display: inline-flex;
+    }
+    
+    .checkout-payment-div #checkout-payment-cash {
+        margin-left: 18px;
+    }
+    
+    .line-div {
+        height: 1px;
+        background-color: rgb(43, 43, 43);
+        opacity: 0.1;
+        margin-bottom: 12px;
+    }
+    
+    .payment-type-div {
+        position: relative;
+        align-items: baseline;
+        margin-left: 10px;
+    }
+    
+    .payment-type-div label {
+        margin-left: 5px;
+    }
+    
+    .checkout-shipping-table {
+        margin-left: 5px;
+    }
+    
+    .checkout-shipping-table td {
+        align-items: center;
+        align-content: center;
+        padding: 5px 5px 5px 5px;
+    }
+    
+    .contenedor-checkout-modal-sub #checkout-confirm-button {
+        margin: 5px 5px 5px 5px;
+        width: 340px;
+        margin-top: 11px;
+    }
+    
+    .contenedor-checkout-modal form {
+        margin: auto;
+        background-color: cornsilk;
+        transition: all 500ms ease;
+        height: 400px;
+        width: 334px;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        overflow-y: scroll;
+        margin-left: 8px;
+        margin-right: 8px;
+        margin-top: 10px;
+        padding-right: 8px;
+    }
+    
+    .checkout-finalamount-div {
+        text-align: center;
+        font-weight: bold;
+        margin-top: 10px;
+        background-color: rgba(248, 26, 92, 1);
+    }
+    
+    .td-amount-checkout {
+        text-align: center;
+    }
+    
+    #componentsTable td {
+        margin: 0;
+        padding: 0;
+    }
+    
+    #componentsTable tr {
+        margin: 0;
+        padding: 0;
+    }
+    
+    #componentsTable input {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .img-td-components {
+        margin: 0;
+    }
+    
+    #componentsTable img {
+        object-fit: scale-down;
+        width: 100px;
+        height: 55px;
+        margin: 0;
+        margin-right: 5px;
+        padding: 0;
+    }
+    
+    #price-td-componenet {
+        text-align: center;
+    }
+    
+    #checkbox-td-componenet {
+        text-align: center;
+    }
+    
+    body .stock-modal {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    
+    .stock-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: all 500ms ease;
+        z-index: 100;
+    }
+    
+    .stock-modal .lista-stock {
+        width: 410px;
+        height: 100vh;
+        margin: auto;
+        padding-left: 5px;
+        padding-right: 5px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.6);
+        transition: all 500ms ease;
+        font-size: small;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+    
+    .lista-stock td {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    #customProductNotes {
+        margin: auto;
+        background-color: white;
+        margin-top: -20px;
+    }
+    
+    .icono {
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding: 0;
+        background-size: 40px;
+        margin: 0;
+        text-align: center;
+    }
+    
+    .producto {
+        background-color: rgba(31, 29, 29, 0.911);
+        padding: 10px;
+        margin-top: 10px;
+        /* --------------------- */
+    }
+    
+    .producto img {
+        object-fit: cover;
+        height: 150px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .producto .p-description-product {
+        object-fit: cover;
+        height: 70px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .producto .p-price-product {
+        font-size: large;
+        text-align: left;
+        margin: 5px;
+    }
+    
+    .producto .productQty {
+        margin: 5px;
+        margin-bottom: 15px;
+    }
+    
+    #lista-productos .row {
+        margin-bottom: 0;
+    }
+    
+    .lista-productos {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .info-producto {
+        color: rgb(255, 255, 255);
+        padding: 5px;
+        display: inline-block;
+    }
+    
+    .info-producto .precio {
+        padding-left: 10px;
+        padding-right: 60px;
+        text-decoration: line-through;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    
+    .info-producto .productQty {
+        color: black;
+        font-weight: bold;
+        width: 55px;
+    }
+    
+    .info-producto .descripcionProducto {
+        height: 100px;
+    }
+    
+    .inputQty {
+        width: 60px;
+    }
+    
+    .bottomComponentsTable .trTotal {
+        background-color: rgb(196, 181, 181);
+        font-weight: bold;
+        height: 20px;
+    }
+    
+    .oculto {
+        visibility: hidden;
+    }
+    
+    .mostrar {
+        visibility: visible;
+    }
+    
+    .no-display {
+        display: none;
+    }
+    
+    .display {
+        display: inline-block;
+    }
+    
+    .footer {
+        background-color: gray;
+    }
+    
+    .footer p {
+        color: black;
+        margin-top: 1rem;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-style: italic;
+    }
